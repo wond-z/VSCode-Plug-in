@@ -26,3 +26,26 @@ http://abusaidm.gallery.vsassets.io/_apis/public/gallery/publisher/abusaidm/exte
 **安装方式**
 
 使用‘从VSIX安装...’
+
+## ssh配置
+
+1.在用户文件夹下创建 `.ssh` 目录
+```
+mkdir .ssh
+```
+
+2.执行以下命令
+```
+ssh-keygen -t rsa -C "xxxxxx@yy.com"  #建议填写自己真实有效的邮箱地址,一路回车
+```
+
+3.打开 `id_rsa.pub` 文件，复制公钥并粘贴到GitHub中 `New an SSH key` 的key输入框
+
+4.配置账户
+```
+# 设置用户名
+$ git config --global user.name "your_username"
+
+# 设置邮箱地址(建议用注册giuhub的邮箱)
+$ git config --global user.email "your_registered_github_Email"
+```
